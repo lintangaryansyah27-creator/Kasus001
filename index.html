@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kasus #001</title>
 
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#111;
+    color:white;
+    margin:0;
+    padding:25px;
+}
+.card{
+    max-width:700px;
+    margin:auto;
+    background:#1d1d1d;
+    padding:20px;
+    border-radius:15px;
+}
+h1{
+    color:#ff4444;
+}
+button{
+    margin-top:20px;
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    font-size:17px;
+    cursor:pointer;
+}
+input{
+    width:100%;
+    padding:12px;
+    margin-top:20px;
+    border-radius:10px;
+    border:none;
+}
+#hasil{
+    margin-top:20px;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+
+<h1>🕵 Kasus #001</h1>
+
+<p>
+Sebuah flashdisk berisi data rahasia telah disembunyikan.
+Pemiliknya menghilang sebelum sempat memberi tahu lokasinya.
+</p>
+
+<p>
+Katanya, lokasi tersebut hanya bisa ditemukan oleh seseorang
+yang benar-benar teliti.
+</p>
+
+<button onclick="petunjuk()">Minta Petunjuk</button>
+
+<input id="pass" placeholder="Masukkan nama lokasi">
+
+<button onclick="cek()">Kirim</button>
+
+<p id="hasil"></p>
+
+</div>
+
+<script>
+
+function petunjuk(){
+alert("Petunjuk:\nPassword tidak ada di halaman ini.\nLihat Source Code (Ctrl+U) atau Inspect Element.");
+}
+
+function cek(){
+
+let jawaban=document.getElementById("pass").value.toLowerCase();
+
+if(jawaban=="monas"){
+document.getElementById("hasil").innerHTML="✅ Misi berhasil! Flashdisk berhasil ditemukan.";
+}else{
+document.getElementById("hasil").innerHTML="❌ Password salah.";
+}
+
+}
+
+/*
+
+====================
+
+PETUNJUK RAHASIA
+
+Decode Base64 berikut:
+
+aHR0cHM6Ly9tYXBzLmdvb2dsZS5jb20vP3E9TW9uYXM=
+
+Buka link tersebut.
+
+Password = Nama tempat.
+
+====================
+
+*/
+
+</script>
+
+</body>
+  </html>
